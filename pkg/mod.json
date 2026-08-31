@@ -7,6 +7,7 @@
   "author": "WTF",
   "description": "The reference mod. It says hello, counts, and now greets you by version.",
   "entrypoint": "com.example.hello.HelloMod",
+  "repository": "Lewdcifer666/wtf-hello-mod",
   "compatibility": {
     "min_host_version": 1,
     "max_host_version": null,

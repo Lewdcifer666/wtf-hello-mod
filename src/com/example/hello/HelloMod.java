@@ -81,7 +81,7 @@ public final class HelloMod implements WtfExternalMod {
             host.prefs().putInt(COUNT, count);
             host.prefs().save();
 
-            host.toast("Hello from an external mod. That is " + count
+            host.toast("Hello from external mod v1.1.0. That is " + count
                      + (count == 1 ? " time." : " times."));
             host.log().i("said hello, count now " + count);
             return;

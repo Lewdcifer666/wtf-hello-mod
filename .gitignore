@@ -1,0 +1,4 @@
+# The signing key is the mod's identity. It never goes in the repository.
+keys/
+build/
+pkg/payload/

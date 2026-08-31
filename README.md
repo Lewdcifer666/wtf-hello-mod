@@ -49,6 +49,16 @@ checksum is transport integrity — the package's own signed hash list is what
 actually decides whether the contents are trustworthy, and it is checked either
 way.
 
+## What is here
+
+```
+src/com/example/hello/HelloMod.java   the mod
+pkg/mod.json                          the manifest that goes in the package
+pkg/assets/                           what it ships alongside
+```
+
+`pkg/payload/plugin.jar` is built, not committed, and so is the signing key.
+
 ## Building
 
 The packager is part of the host, not a reimplementation of its format:

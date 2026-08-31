@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "package_format": 1,
+  "id": "com.example.hello",
+  "name": "WTF Hello Mod",
+  "version": "1.0.0",
+  "author": "WTF",
+  "description": "The reference mod. It says hello and counts how often you asked.",
+  "entrypoint": "com.example.hello.HelloMod",
+  "compatibility": {
+    "min_host_version": 1,
+    "max_host_version": null,
+    "stremio_versions": [],
+    "min_android_api": 24,
+    "architectures": []
+  },
+  "dependencies": [],
+  "conflicts": [],
+  "capabilities": ["host.lifecycle", "host.actions"],
+  "permissions": [],
+  "signing": { "signed": true }
+}

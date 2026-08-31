@@ -49,9 +49,26 @@ checksum is transport integrity — the package's own signed hash list is what
 actually decides whether the contents are trustworthy, and it is checked either
 way.
 
+## The repository contract
+
+The television reads this repository before it downloads anything:
+
+1. `GET /repos/{owner}/{repo}` — the **default branch**, read rather than assumed
+   (this repository's is `master`).
+2. `mod.json` **at the root of that branch** — the manifest it advertises.
+3. `GET /repos/{owner}/{repo}/releases/latest` — the current release.
+4. the single `.wtfmod` asset, and its `.sha256` if published.
+
+After download, the packaged `mod.json` must agree with this one on **id and
+version**. The root manifest is unsigned metadata and never overrides the
+packaged one; it only decides whether to go on. So **bump the root `mod.json`
+in the same commit you publish the release**, or the install stops with
+*"the repository advertises version X but its current release contains Y"*.
+
 ## What is here
 
 ```
+mod.json                              what the repository advertises
 src/com/example/hello/HelloMod.java   the mod
 pkg/mod.json                          the manifest that goes in the package
 pkg/assets/                           what it ships alongside
